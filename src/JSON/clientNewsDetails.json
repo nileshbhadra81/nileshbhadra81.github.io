@@ -1,0 +1,42 @@
+{
+    "clientDetails": [
+        {
+        "type":"Top News",
+       
+        "news":[
+                {"headline":"Top News Headline1","description":"Top News description1"},
+                {"headline":"Top News Headline2","description":"Top News description2"},
+                {"headline":"Top News Headline3","description":"Top News description3"}
+              ]
+      },
+      {
+        "type":"Your Companies",
+      
+        "news":[
+                {"headline":"Your Companies Headline1","description":"Your Companies description1"},
+                {"headline":"Your Companies Headline2","description":"Your Companies description2"},
+                {"headline":"Your Companies Headline3","description":"Your Companies description3"}
+              ]
+
+      },
+      {
+        "type":"Your Industries",
+    
+         "news":[
+                {"headline":"Your Industries Headline1","description":"Your Industries description1"},
+                {"headline":"Your Industries Headline2","description":"Your Industries description2"},
+                {"headline":"Your Industries Headline3","description":"Your Industries description3"}
+              ]
+
+      },
+      {
+        "type":"Bookmarks",
+        
+        "news":[
+                {"headline":"Bookmarks Headline1","description":"Bookmarks description1"},
+                {"headline":"Bookmarks Headline2","description":"Bookmarks description2"},
+                {"headline":"Bookmarks Headline3","description":"Bookmarks description3"}
+              ]
+      }
+    ]
+}

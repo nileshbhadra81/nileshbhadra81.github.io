@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en" >
+  <head>
+    <title>Angular Material - Starter App</title>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no" />
+
+    <link rel='stylesheet' href='http://fonts.googleapis.com/css?family=Roboto:400,500,700,400italic'>
+    <link rel="stylesheet" href="./bower_components/angular-material/angular-material.css"/>
+    <link rel="stylesheet" href="assets/app.css"/>
+  </head>
+
+  <body ng-app="starterApp" layout="column" ng-controller="UserController as ul">
+
+    <md-toolbar layout="row" class="md-accent">
+      <md-button class="menu" hide-gt-sm ng-click="ul.toggleList()" aria-label="Show User List" >
+        <md-icon md-svg-icon="menu" ></md-icon>
+      </md-button>
+      <h1 class="md-toolbar-tools" flex-gt-sm="20">Client News</h1>
+      <md-tabs hide-sm hide-md md-align-tabs="bottom"  md-selected="ul.selectedIndex" flex-gt-sm="75" md-stretch-tabs="never">
+       
+
+  <md-tab class="md-primary"ng-repeat="obj in ul.users" ng-click="ul.selectNewsType(obj,$index)" >
+
+   
+          {{obj.type}}
+        </md-tab>
+        
+      </md-tabs>
+      <md-button class="search" flex-gt-sm="5">
+        <md-icon md-svg-icon="search"></md-icon>
+      </md-button>
+    </md-toolbar> 
+
+
+
+    <div flex layout="row" layout-margin layout-align="center centre">
+        
+        <div display-headlines></div>	
+     	<div display-details></div>
+    </div>
+
+    <script src="./bower_components/angular/angular.js"></script>
+    <script src="./bower_components/angular-animate/angular-animate.js"></script>
+    <script src="./bower_components/angular-aria/angular-aria.js"></script>
+    <script type="text/javascript" src="./bower_components/angular-material/angular-material.js"></script>
+
+    <script src="./src/users/Users.js"></script>
+    <script src="./src/users/UserController.js"></script>
+    <script src="./src/users/UserService.js"></script>
+    <script src="./src/users/app.js"></script>
+    <script src="./src/users/headlines.js"></script>
+    <script src="./src/users/details.js"></script>   
+
+  </body>
+</html>

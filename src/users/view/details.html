@@ -1,0 +1,35 @@
+<md-content  flex id="content">
+
+
+<!-- desktop view -->
+
+<div hide-sm hide-md>      
+
+  <md-list>{{ul.selected.description}}</md-list>
+  <md-button class="share" md-no-ink ng-click="ul.share($event)" aria-label="Share">
+    <md-icon md-svg-icon="share"></md-icon>
+  </md-button>
+</div>
+
+<!-- mobile view -->
+<!--displayed on the click of type -->
+ <md-item  hide-gt-lg ng-repeat="obj in ul.newsList" ng-hide="ul.showDetails==1"> 
+  <md-button ng-click="ul.selectNews(obj)" >    
+    {{obj.headline}}
+  </md-button>
+ </md-item>
+
+
+
+
+<!--displayed on the click of headline -->
+ <md-item  hide-gt-lg ng-show="ul.showDetails==1"> 
+   {{ul.selected.description}}               
+ </md-item>
+
+
+</md-content>
+
+
+        
+          

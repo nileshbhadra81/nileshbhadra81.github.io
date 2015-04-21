@@ -1,0 +1,49 @@
+<md-sidenav md-is-locked-open="$mdMedia('gt-sm')" class="md-whiteframe-z2" md-component-id="left" class="side-nav">
+          <div layout="row" layout-align="center center">
+            <div layout="column" flex="85" layout-padding hide-gt-sm>
+              <div>McKinsey&Company</div>
+              <div><b>Client News</b></div>
+            </div>
+            <div flex>
+              <md-button ng-click="ul.close()" hide-gt-sm>
+                <md-icon md-svg-icon="close" ></md-icon>
+              </md-button>
+            </div>
+          </div>
+          <md-divider></md-divider>
+          
+          <!-- for desktop --> 
+    
+
+         <!-- ***************************************** -->
+         <div layout="column" layout-margin layout-padding hide-sm hide-md>
+          <md-content>
+            <md-list>
+              <md-list-item flex ng-repeat="obj in ul.newsList" >
+                <md-button ng-click="ul.selectNews(obj)" style="text-transform: capitalize" class="md-raised align-button" >
+                  <div class="md-list-item-text" layout="row">
+                    <h3 class="md-headline">American Airlines</h3>
+                    <p>| 1 hour ago</p>
+                  </div>
+                  <div class="news-headlines">{{obj.headline}}</div>
+                  <p class="website">flightglobal.com</p>
+                  <div class="md-list-item-text" layout="row">
+                    <div flex>100</div>
+                    <div>save</div>
+                  </div>
+                </md-button>
+              </md-list-item>
+            </md-list>
+          </md-content>
+         </div>
+           <!-- for mobile -->
+           <div hide-gt-sm>
+             <md-list>
+                <md-list-item ng-repeat="it in ul.users" class="md-primary">
+                  <md-button ng-click="ul.selectNewsType(it)" ng-class="{'selected' : it === ul.selected }">                
+                  {{it.type}}
+                  </md-button>
+                </md-list-item>
+              </md-list>            
+           </div>          
+        </md-sidenav>
